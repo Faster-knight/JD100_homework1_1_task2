@@ -8,15 +8,6 @@ public class Main {
         int income = 300;
         int spending = 200;
         int temp = income - spending;
-        if (income + spending < 0) throw new RuntimeException(
-                "INT type hve length -2^32+1 <= value <= 2^32-1"
-        );
-        try {
-            OutputStreamWriter stream = new OutputStreamWriter(System.out);
-            stream.write("Итого (руб):\n%s".formatted(temp));
-            stream.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        System.out.println("Итого (руб):\n%s".formatted(temp));
     }
 }
